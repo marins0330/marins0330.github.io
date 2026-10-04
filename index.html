@@ -168,7 +168,7 @@
       I turn messy, large-scale data into decisions people act on. For nearly three years I analyzed
       Samsung.com web data across dozens of countries, and I recently earned an MS in Data Science
       from Boston University with a 4.0 GPA. I enjoy finding the question behind the request,
-      and automating the work that keeps teams from answering it.
+      and automating repetitive work so teams can spend more time answering it.
     </p>
     <div class="btns">
       <a class="btn primary" href="Hyun_Sung_Park_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
@@ -203,8 +203,8 @@
       <ul>
         <li>Led a 3-person team owning Help Contents Resolution (HCR), the share of visitors who said a self-help article solved their problem. Raised global HCR from 60% to 85%, beating the client's 82% target.</li>
         <li>Joined article publish and update history with article-level HCR and found that outdated solutions were driving low ratings. My cleanup recommendation contributed roughly 12 percentage points of the gain.</li>
-        <li>Noticed that hardware-failure articles could never be resolved by self-help. Proposed and analyzed an A/B test with Samsung UK that added repair-service banners, giving customers a natural next step. HCR on those articles rose from about 20% to about 80%.</li>
-        <li>Designed the specs for a KPI dashboard on the Adobe Analytics API (journey funnel, time on page, anomaly monitoring), rolled out to 89 Samsung subsidiaries to monitor their local support sites.</li>
+        <li>Noticed that hardware failures could not be resolved through self-service content, so these articles dragged HCR down without helping customers. Proposed and analyzed an A/B test with Samsung UK that added repair-service banners, giving customers a natural next step. HCR on those articles rose from about 20% to about 80%.</li>
+        <li>Designed the specifications for a KPI dashboard powered by the Adobe Analytics API (journey funnel, time on page, anomaly monitoring), rolled out to 89 Samsung subsidiaries to monitor their local support sites.</li>
       </ul>
     </div>
 
@@ -212,7 +212,7 @@
       <h4>Mobile Promotions Analytics</h4>
       <ul>
         <li>Analyzed site funnels (landing → product page → cart → order) for Galaxy Z Fold3/Flip3 and Galaxy S22 launches and Black Friday/Cyber Monday 2021 across 14 countries.</li>
-        <li>Went beyond the requested reports to analyze button-level click-through and conversion, and how layouts performed on mobile versus desktop.</li>
+        <li>Initiated analyses beyond the standard reports: button-level click-through and conversion, and how layouts performed on mobile versus desktop.</li>
         <li>Recommended device-specific button and banner fixes. Once adopted, Samsung.com conversion rose 1.8 percentage points in an equal-length pre/post comparison.</li>
       </ul>
     </div>
@@ -220,7 +220,7 @@
     <div class="team">
       <h4>Display &amp; Signage Analytics</h4>
       <ul>
-        <li>On my own initiative, built a Python ETL pipeline (Adobe Analytics API → MySQL → pandas → Excel) that fills the monthly KPI report for 15 markets automatically.</li>
+        <li>Identified manual reporting as a bottleneck and built a Python ETL pipeline (Adobe Analytics API → MySQL → pandas → Excel) that fills the monthly KPI report for 15 markets automatically.</li>
         <li>Cut report production from 2 analysts × 3 days to a 2-hour automated run, so the whole team could focus on analysis.</li>
         <li>Generalized it into a no-code desktop app that lets any team define and pull Adobe Analytics reports, working around the tool's breakdown-depth and row limits. Two other teams adopted it for their key reports.</li>
         <li>Found that the highest-CTR buttons sat below the fold where most visitors never scrolled. Moving them up lifted promo-page CTR from about 42% to 65%.</li>
@@ -232,12 +232,12 @@
 <section id="projects" style="background: var(--bg-alt);">
   <div class="wrap">
     <h2>Projects</h2>
-    <p class="sub">Graduate projects at Boston University, including work published by a news organization</p>
+    <p class="sub">Graduate projects at Boston University, including analysis that contributed to a published GBH News investigation</p>
 
     <div class="projects">
 
       <article class="project">
-        <div class="kicker">SQL · Real client · Published</div>
+        <div class="kicker">SQL · Client project · Published investigation</div>
         <div class="project-head">
           <h3>Student Debt Litigation Analysis for GBH News</h3>
           <span class="date">Sep 2024 – Dec 2024</span>
@@ -247,7 +247,7 @@
           <dt>Question</dt>
           <dd>How often does the Massachusetts Educational Financing Authority (MEFA), a state agency that issues student loans, sue its borrowers?</dd>
           <dt>What I did</dt>
-          <dd>Wrote multi-table MySQL joins over Massachusetts court records (parties, cases, courts, attorneys), using LIKE and REGEXP patterns to catch the many spellings and typos of each lender's name. Profiled 9 major student-loan collectors across 15K+ cases, and prepared the data behind the team's dashboard.</dd>
+          <dd>Wrote multi-table MySQL joins across Massachusetts court records (parties, cases, courts, attorneys), using LIKE and REGEXP patterns to catch the many spellings and typos of each lender's name. Profiled 9 major student-loan collectors across 15K+ cases, and prepared the data behind the team's dashboard.</dd>
           <dt>Data quality</dt>
           <dd>The client asked why an earlier team's counts did not match official court reports. I traced it to an encoding bug that silently dropped files; fixing it nearly doubled the licensed collectors found, from 651 to 1,240.</dd>
         </dl>
@@ -273,7 +273,7 @@
           <dt>Lesson</dt>
           <dd>A Random Forest rating model explained little variance (R² 0.03), so I treated its feature importances as directional only and leaned on the EDA and NLP results.</dd>
         </dl>
-        <div class="highlight">Products whose critical reviews collected the most helpful votes averaged 2.7 stars, versus 4.0–4.5 for the rest: an early-warning signal sellers can monitor.</div>
+        <div class="highlight">Products whose critical reviews collected the most helpful votes averaged 2.7 stars, versus 4.0–4.5 for the rest, suggesting a potential early-warning signal for sellers.</div>
         <div class="tags"><span class="tag">PySpark</span><span class="tag">Spark MLlib</span><span class="tag">LDA</span><span class="tag">GCP</span><span class="tag">Parquet</span></div>
       </article>
 
@@ -341,7 +341,7 @@
           <dt>What I did</dt>
           <dd>Cleaned a dataset seeded with corrupted records, engineered shot-angle and game-time fatigue features, and trained a LightGBM classifier with early stopping on a held-out split. Also clustered player shooting profiles with Gaussian mixture models.</dd>
           <dt>Result</dt>
-          <dd>65.1% accuracy on hidden test data, against a 54% majority-class baseline. My held-out validation score matched the leaderboard, a sign the model generalized rather than overfit.</dd>
+          <dd>65.1% accuracy on hidden test data, against a 54% majority-class baseline. My held-out validation score closely matched the hidden-test leaderboard score, showing strong consistency between validation and test performance.</dd>
         </dl>
         <div class="highlight">Ranked 12th of 68, just 0.3 percentage points behind first place.</div>
         <div class="tags"><span class="tag">LightGBM</span><span class="tag">Feature engineering</span><span class="tag">scikit-learn</span><span class="tag">GMM clustering</span></div>
